@@ -9,7 +9,7 @@ import lombok.ToString;
 @Setter
 @AllArgsConstructor
 @ToString
-public final class Verite extends Affirmation {
+public final class Vérité extends Affirmation {
     private String description;
 
     @Override

@@ -8,14 +8,14 @@ import org.junit.jupiter.api.Test;
 public class OuTest {
     @Test
     public void test_Lou_est_beau_ou_Lou_est_beau() {
-        Affirmation verite = new Verite("Lou est beau");
+        Affirmation verite = new Vérité("Lou est beau");
         Affirmation affirmation = new AffirmationGenerale(verite, verite, Logic.OU);
         assertTrue(affirmation.estVrai());
     }
 
     @Test
     public void test_Lou_est_beau_ou_Lou_est_pauvre() {
-        Affirmation verite = new Verite("Lou est beau");
+        Affirmation verite = new Vérité("Lou est beau");
         Affirmation mensonge = new Mensonge("Lou est pauvre");
         Affirmation affirmation = new AffirmationGenerale(verite, mensonge, Logic.OU);
         assertTrue(affirmation.estVrai());
