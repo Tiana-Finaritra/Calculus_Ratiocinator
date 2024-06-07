@@ -11,7 +11,7 @@ public class DoncTest {
         Affirmation verite = new Vérité("Lou est beau");
         Affirmation mensonge = new Mensonge("Lou est pauvre");
         Affirmation affirmation = new AffirmationGenerale(verite, mensonge, Logic.DONC);
-        assertFalse(affirmation.estVrai());
+        assertEquals("Faux", affirmation.estVrai());
     }
 
     @Test
@@ -19,7 +19,7 @@ public class DoncTest {
         Affirmation mensonge = new Mensonge("Lou est pauvre");
         Affirmation verite = new Vérité("Lou est beau");
         Affirmation affirmation = new AffirmationGenerale(mensonge, verite, Logic.DONC);
-        assertTrue(affirmation.estVrai());
+        assertEquals("Vrai", affirmation.estVrai());
     }
 
     @Test
@@ -27,7 +27,7 @@ public class DoncTest {
         Affirmation verite1 = new Vérité("Lou est beau");
         Affirmation verite2 = new Vérité("Lou est beau");
         Affirmation affirmation = new AffirmationGenerale(verite1, verite2, Logic.DONC);
-        assertTrue(affirmation.estVrai());
+        assertEquals("Vrai", affirmation.estVrai());
     }
 
     @Test
@@ -35,6 +35,6 @@ public class DoncTest {
         Affirmation mensonge1 = new Mensonge("Lou est pauvre");
         Affirmation mensonge2 = new Mensonge("Lou est pauvre");
         Affirmation affirmation = new AffirmationGenerale(mensonge1, mensonge2, Logic.DONC);
-        assertTrue(affirmation.estVrai());
+        assertEquals("Vrai", affirmation.estVrai());
     }
 }

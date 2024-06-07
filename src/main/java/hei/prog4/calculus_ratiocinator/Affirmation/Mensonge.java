@@ -13,8 +13,8 @@ public final class Mensonge extends Affirmation {
     private String description;
 
     @Override
-    public boolean estVrai() {
-        return false;
+    public String estVrai() {
+        return "Faux";
     }
 
 }

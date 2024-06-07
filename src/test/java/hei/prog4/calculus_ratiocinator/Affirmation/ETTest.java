@@ -9,7 +9,7 @@ public class ETTest {
     public void test_Lou_est_beau_et_Lou_est_beau() {
         Affirmation verite = new Vérité("Lou est beau");
         Affirmation affirmation = new AffirmationGenerale(verite, verite, Logic.ET);
-        assertTrue(affirmation.estVrai());
+        assertEquals("Vrai", affirmation.estVrai());
     }
 
     @Test
@@ -17,7 +17,7 @@ public class ETTest {
         Affirmation verite = new Vérité("Lou est beau");
         Affirmation mensonge = new Mensonge("Lou est pauvre");
         Affirmation affirmation = new AffirmationGenerale(verite, mensonge, Logic.ET);
-        assertFalse(affirmation.estVrai());
+        assertEquals("Faux", affirmation.estVrai());
     }
 
     @Test
@@ -25,6 +25,6 @@ public class ETTest {
         Affirmation mensonge1 = new Mensonge("Lou est pauvre");
         Affirmation mensonge2 = new Mensonge("Lou est pauvre");
         Affirmation affirmation = new AffirmationGenerale(mensonge1, mensonge2, Logic.ET);
-        assertFalse(affirmation.estVrai());
+        assertEquals("Faux", affirmation.estVrai());
     }
 }

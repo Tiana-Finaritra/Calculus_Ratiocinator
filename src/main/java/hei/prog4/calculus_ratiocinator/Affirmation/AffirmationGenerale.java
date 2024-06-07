@@ -13,8 +13,7 @@ public final class AffirmationGenerale extends Affirmation {
     private Logic logic;
 
     @Override
-    public boolean estVrai() {
-        return logic.evalue(affirmation1.estVrai(), affirmation2.estVrai());
+    public String estVrai() {
+        return logic.evalue(affirmation1.estVrai().equals("Vrai"), affirmation2.estVrai().equals("Vrai")) ? "Vrai" : "Faux";
     }
-
 }

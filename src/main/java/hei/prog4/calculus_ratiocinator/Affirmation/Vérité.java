@@ -13,8 +13,8 @@ public final class Vérité extends Affirmation {
     private String description;
 
     @Override
-    public boolean estVrai() {
-        return true;
+    public String estVrai() {
+        return "Vrai";
     }
 
 }
